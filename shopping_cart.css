@@ -1,0 +1,72 @@
+
+.sanpham button{
+    cursor: pointer;
+}
+.icons{
+    cursor: pointer;
+}
+
+.cart{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+.cart h2{
+    margin-bottom: 20px;
+    margin-top: 100px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+}
+.cart table{
+    width: 100%;
+}
+.cart table thead tr th:first-child{
+    text-align: left;
+}
+.cart table tr td{
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+    
+}
+.cart table thead tr th:last-child{
+    text-align: right;
+}
+.cart table thead tr td:last-child{
+    text-align: right;
+}
+.cart{
+    position: fixed;
+    height: 100vh;
+    width: 400px;
+    right: 0;
+    top: 0;
+    background-color: rgb(214, 196, 145);
+    padding: 12px 20px;
+    overflow-y: scroll;
+    right: -100%;
+}
+.cart button{
+    margin-top: 12px;
+    height: 30px;
+    padding: 0 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: tomato;
+}
+.cart i{
+    cursor: pointer;
+    margin-top: 90px;
+    margin-bottom: 30px;
+    right: 0px;
+    position: absolute;
+    width: 80px;
+}
+.cart-icon i{
+cursor: pointer;
+
+}
+.cart p{
+    margin-top: 40px;
+}

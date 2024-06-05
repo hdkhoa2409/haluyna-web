@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập tài khoản - Haluyna</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./SignIn.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/679/679847.png">
+</head>
+<body>
+    <!--header section starts-->
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="./TrangChu.html" class="logo">haluyna</a>
+
+        <form action=" " style=" background:#ffffff;
+            border-radius:50px;">
+                <table>
+                  <input type="text" style="border:none;
+                    color:rgb(27, 26, 26);
+                    background:none;
+                    padding:15px 60px;
+                    font-size: 18px;
+                   "  placeholder="Search" >
+                </table>
+        </form>
+        <nav class="navbar">
+            
+          <a href="./TrangChu.html">Trang chủ</a>
+          <a href="./GioiThieu.html">Giới thiệu</a>
+           <a href="./SanPham.html">Sản phẩm</a>
+           <a href="./DanhGia.html">Đánh giá</a>
+           <a href="./LienHe.html">Liên hệ</a>
+       
+       
+        </nav>
+
+        <div class="icons" style="margin-right: 10px;">
+          <a href="#" class="fas fa-shopping-cart"></a>   
+      </div>
+      
+      <ul>
+          <li>
+            <h2><a href="./SignIn.html">Đăng nhập</a></h2>
+          </li>
+      </ul>
+    </header>
+<section class="home" id="home">
+    <div class="container" style="margin:0 auto">
+      <div class="heading">Đăng Nhập</div>
+      <form action="" class="form" id="loginForm">
+        <input required class="input" type="text" name="full_name" id="full_name" placeholder="Tên tài khoản">
+        <input required class="input" type="password" name="password" id="password" placeholder="Mật khẩu">
+        <span class="forgot-password"><a href="#">*Lưu ý: đây là nơi đăng nhập tài khoản nhân viên</a></span>
+        <input class="login-button" type="submit" value="Đăng Nhập">
+    </form>
+      <span class="agreement"><a href="#">Learn user licence agreement</a></span>
+    </div>
+</section>
+<div id="notification" class="notification"></div>
+<script src="./SignIn.js"></script>
+</body>
+</html>

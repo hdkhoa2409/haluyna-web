@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách sản phẩm - Haluyna</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./SanPham.css">
+    <link rel="stylesheet" href="./shopping_cart.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/679/679847.png">
+</head>
+<body>
+    <!--header section starts-->
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <label class="popup">
+            <input type="checkbox">
+            <div class="burger" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="popup-window">
+                <legend>Bộ lọc sản phẩm</legend>
+                <ul style="padding:20px">
+                    <li>
+                        <label for="select1">Loại trang phục</label>
+                        <select id="productType" name="able_list" style="margin: 0 auto; width: 250px;border-radius: 10px;height:30px">
+                            <optgroup label="Loại trang phục" style="text-align: center;">
+                                <option value="all">Tất cả</option>
+                                <option value="ao_nu">Áo nữ</option>
+                                <option value="chan_vay">Chân váy</option>
+                                <option value="dam">Đầm</option>
+                                <option value="quan">Quần</option>
+                            </optgroup>
+                        </select>
+                    </li>
+                    <li>
+                        <span>Mức giá:</span>
+                        <div id="radio-inputs_1">
+                            <label class="radio">
+                                <input type="radio" name="priceRange" value="0-2000" checked>
+                                <span class="name">Tất cả</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="priceRange" value="200-500">
+                                <span class="name">200k-500k</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="priceRange" value="500-1000">
+                                <span class="name">500k-1000k</span>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <button id="searchButton">
+                            <span>Tìm Kiếm</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </label>
+
+        <a href="./TrangChu.html" class="logo">haluyna</a>
+
+        <form action=" " style=" background:#ffffff;
+            border-radius:50px;">
+                <table>
+                    <input type="text" style="border:none;
+      
+                    color:rgb(27, 26, 26);
+                    background:none;
+                    padding:15px 60px;
+                    font-size: 18px;
+                   "  placeholder="Search" >
+                </table>
+        
+        </form>
+
+        <nav class="navbar">
+            
+            <a href="./TrangChu.html">Trang chủ</a>
+            <a href="./GioiThieu.html">Giới thiệu</a>
+             <a href="./SanPham.html">Sản phẩm</a>
+             <a href="./DanhGia.html">Đánh giá</a>
+             <a href="./LienHe.html">Liên hệ</a>
+         
+         
+     </nav>
+
+        <div class="cart-icon">
+            
+           <!--- <a href="#" class="fas fa-shopping-cart"></a>-------->
+            <p><i class="fas fa-shopping-cart"></i><span>0</span></p>
+           
+        </div>
+        <ul>
+            <li>
+                <h2><a href="./SignIn.html">Đăng nhập</a></h2>
+            </li>
+        </ul>
+        
+    </header>
+    <!---------------->
+   
+      <!-------------------------->
+<div class="container">
+    <div class="single-item">
+    <section id="main1">
+        <!--**text*****************-->
+        <div class="main-text">
+            <h2><a href="#">Mua Ngay</a></h2>
+        </div>
+        <!--**img******************-->
+    </section>
+    <section id="main2">
+        <!--**text*****************-->
+        <div class="main-text">
+
+            <h2><a href="#">Mua Ngay</a></h2>
+        </div>
+        <!--**img******************-->
+    </section>
+    <section id="main3">
+        <!--**text*****************-->
+        <div class="main-text">
+            <h2><a href="#">Mua Ngay</a></h2>
+        </div>
+        <!--**img******************-->
+    </section>
+    <section id="main4">
+        <!--**text*****************-->
+        <div class="main-text">
+            <h2><a href="">Mua Ngay</a></h2>
+        </div>
+        <!--**img******************-->
+    </section>
+    </div>
+</div>
+
+
+    <!--==product-grid-3=======================-->
+    <section class="product-grid-3" style="padding:50px">
+        <!--**box*************-->
+        <div class="product-grid-box product-grid-box1">
+            <!--img-->
+            <img src="./image1/năngdong.webp" />
+            <!--text-->
+            <div class="product-grid-text">
+                <strong>Năng động</strong>
+                <a href="#new_products">Mua Ngay</a>
+            </div>
+        </div>
+
+        <!--**box*************-->
+        <div class="product-grid-box product-grid-box2">
+            <!--img-->
+            <img src="./image 1/ao_nu_2_1.webp" />
+            <!--text-->
+            <div class="product-grid-text">
+                <strong>Cá tính</strong>
+                
+                <a href="#new_products">Mua Ngay</a>
+            </div>
+        </div>
+
+        <div class="product-grid-box product-grid-box3">
+            <!--img-->
+            <img src="./image1/sangtrong.jpg">
+            <!--text-->
+            <div class="product-grid-text">
+                <strong>Sang trọng</strong>
+                
+                <a href="#new_products">Mua Ngay</a>
+            </div>
+        </div>
+
+        <!--**box*************-->
+    </section>
+    <div id="countdown-clock">
+        <h3>Thời gian khuyến mãi còn:</h3>
+        <div id="countdown"></div>
+    </div>
+
+    <!--==New-Products-->
+  
+        
+    <!--------------------------------->
+    <section id="new_products" style="padding:60px" class="sanpham">
+
+    <div class="new-p-heading">
+            <!--heading-->
+            <h1>Giảm giá <span>50%</span></h1>
+            <!--filter-->
+           
+        </div>
+        <div class="new-product-container">
+        <div class="new-product-box-wrapper skin" data-category="ao_nu">
+            <div class="new-product-box">
+                <!--img-->
+                <a href="./ao_nu_6.html" class="new-product-img hinh">
+                    <span>50%</span>
+                    <img src="./image 1/ao_nu_6_1.webp" />
+                </a>
+                <!--text-->
+                <div class="new-product-text">
+                    <a href="ao_nu_6.html" class="new-product-title ten">Áo 2 Dây Nữ Linen Trơn Form Regular</a>
+                    <p><span class="gia">544.000 </span><sup>₫</sup></p>  
+                    <div class="icons">
+                        <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                        <a href="ao_nu_6.html" class="cart-btn ">Chi tiết</a>
+                        <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div><!--end-box-->
+
+            <div class="new-product-box-wrapper skin" data-category="ao_nu">
+                <div class="new-product-box">
+                    <!--img-->
+                    <a href="./ao_nu_7.html" class="new-product-img hinh">
+                        <span>50%</span>
+                        <img src="./image 1/ao_nu_7_1.webp" />
+                    </a>
+                    <!--text-->
+                    <div class="new-product-text">
+                        <a href="ao_nu_7.html" class="new-product-title ten">Áo Sơ Mi Nữ Sát Nách Trơn Dây Rút Vai Form Regularn</a>
+                        <p><span class="gia">441.000 </span><sup>₫</sup></p>
+                        <div class="icons">
+                            <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                            <a href="ao_nu_7.html" class="cart-btn">Chi tiết</a>
+                            <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                </div><!--end-box-->
+
+                <div class="new-product-box-wrapper skin" data-category="ao_nu">
+                    <div class="new-product-box">
+                        <!--img-->
+                        <a href="./ao_nu_4.html" class="new-product-img hinh">
+                            <span>50%</span>
+                            <img src="./image 1/ao_nu_4_1.webp" />
+                        </a>
+                        <!--text-->
+                        <div class="new-product-text">
+                            <a href="#" class="new-product-title ten">Áo Sơ Mi Nữ Tay Dài Linen Túi Thêu Form Regular Crop</a>
+                            <p><span class="gia">540.000</span><sup>₫</sup></p>
+                            <div class="icons">
+                                <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                                <a href="ao_nu_4.html" class="cart-btn">Chi tiết</a>
+                                <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    </div><!--end-box-->
+
+                    <div class="new-product-box-wrapper skin" data-category="ao_nu">
+                        <div class="new-product-box">
+                            <!--img-->
+                            <a href="./ao_nu_5.html" class="new-product-img hinh">
+                                <span>50%</span>
+                                <img src="./image 1/ao_nu_5_1.webp" />
+                            </a>
+                            <!--text-->
+                            <div class="new-product-text">
+                                <a href="#" class="new-product-title ten">Áo Sơ Mi Nữ Sát Nách Cổ V Xẻ Trước Trơn Form Regular</a>
+                                <p><span class="gia">540.000</span><sup>₫</sup></p>
+                                <div class="icons">
+                                    <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                                    <a href="./ao_nu_5.html" class="cart-btn">Chi tiết</a>
+                                    <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        </div><!--end-box-->
+
+                        <div class="new-product-box-wrapper skin" data-category="chan_vay">
+                            <div class="new-product-box">
+                                <!--img-->
+                                <a href="./chan_vay_2.html" class="new-product-img hinh">
+                                    <span>50%</span>
+                                    <img src="./image 1/chan_vay_2_1.webp" />
+                                </a>
+                                <!--text-->
+                                <div class="new-product-text">
+                                    <a href="#" class="new-product-title ten">Chân Váy Jean Nữ Túi Đắp Trơn Form Chữ A</a>
+                                    <p><span class="gia">412.000</span><sup>₫</sup></p>
+                                    <div class="icons">
+                                        <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                                        <a href="./chan_vay_2.html" class="cart-btn">Chi tiết</a>
+                                        <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            </div><!--end-box-->
+        </div>
+                
+    </section>
+    <!--------------------------------->
+    <section style="padding:60px">
+
+        <!--**heading*********************-->
+        <div class="new-p-heading" id="product_springsummer">
+            <!--heading-->
+            <h3>BST Mùa Xuân - Hạ</h3>
+            <!--filter-->
+            <ul>
+                <li class="filter-list" data-filter="all"><a href="#new_products">Đang giảm giá</a></li>
+                <li class="filter-list" data-filter="skin"><a href="#product_springsummer">BST Mùa xuân - hạ</a></li>
+                <li class="filter-list" data-filter="mackup"><a href="#product_autumn">BST Mùa thu</a></li>
+                <li class="filter-list" data-filter="nail"><a href="#product_winter">BST Mùa đông</a></li>
+            </ul>
+        </div>
+        <div class="new-product-container">
+        <div class="new-product-box-wrapper skin" data-category="ao_nu">
+            <div class="new-product-box">
+                <!--img-->
+                <a href="./ao_nu_2.html" class="new-product-img hinh">
+                    <span>10%</span>
+                    <img src="./image 1/ao_nu_2_2.webp" />
+                </a>
+                <!--text-->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title ten">Áo Thun Nữ Tay Dài Cổ Lệch Kiểu Trơn Form Fitted</a>
+                    <p><span class="gia">392.000</span><sup>₫</sup></p>
+                    <div class="icons">
+                        <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                        <a href="ao_nu_1.html" class="cart-btn">Chi tiết</a>
+                        <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                   
+                </div>
+            </div>
+            </div><!--end-box-->
+
+            <div class="new-product-box-wrapper skin" data-category="ao_nu">
+                <div class="new-product-box">
+                    <!--img-->
+                    <a href="./ao_nu_1.html" class="new-product-img hinh">
+                        <span>50%</span>
+                        <img src="./image 1/ao_nu_1_1.webp" />
+                    </a>
+                    <!--text-->
+                    <div class="new-product-text">
+                        <a href="#" class="new-product-title ten">Áo Thun Nữ Tay Dài Cổ Lệch Kiểu Trơn Form Fitted</a>
+                        <p><span class="gia">540.000</span><sup>₫</sup></p>
+                        <div class="icons">
+                            <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                            <a href="ao_nu_1.html" class="cart-btn">Chi tiết</a>
+                            <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                </div><!--end-box-->
+
+                <div class="new-product-box-wrapper skin" data-category="ao_nu">
+                    <div class="new-product-box">
+                        <!--img-->
+                        <a href="./ao_nu_5.html" class="new-product-img hinh">
+                            <span>50%</span>
+                            <img src="./image 1/ao_nu_5_2.webp" />
+                        </a>
+                        <!--text-->
+                        <div class="new-product-text">
+                            <a href="#" class="new-product-title ten">Áo Sơ Mi Nữ Sát Nách Cổ V Xẻ Trước Trơn Form Regular</a>
+                            <p><span class="gia">540.000</span><sup>₫</sup></p>
+                            <div class="icons">
+                                <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                                <a href="ao_nu_5.html" class="cart-btn">Chi tiết</a>
+                                <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    </div><!--end-box-->
+
+                    <div class="new-product-box-wrapper skin" data-category="chan_vay">
+                        <div class="new-product-box">
+                            <!--img-->
+                            <a href="./chan_vay_1.html" class="new-product-img hinh">
+                                <span>10%</span>
+                                <img src="./image 1/chan_vay_1_3.webp" />
+                            </a>
+                            <!--text-->
+                            <div class="new-product-text">
+                                <a href="#" class="new-product-title ten">Chân Váy Chữ A Jean Nữ Họa Tiết In Laser Form A Line</a>
+                                <p><span class="gia">540.000</span><sup>₫</sup></p>
+                                <div class="icons">
+                                    <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                                    <a href="chan_vay_1.html" class="cart-btn">Chi tiết</a>
+                                    <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        </div><!--end-box-->
+
+                        <div class="new-product-box-wrapper skin" data-category="chan_vay">
+                            <div class="new-product-box">
+                                <!--img-->
+                                <a href="./chan_vay_3.html" class="new-product-img hinh">
+                                    <span>5%</span>
+                                    <img src="./image 1/chan_vay_2_3.webp" />
+                                </a>
+                                <!--text-->
+                                <div class="new-product-text">
+                                    <a href="#" class="new-product-title ten">Chân Váy Chữ A Nữ Kẻ Sọc Caro Xếp Ly Nhỏ Form A Line</a>
+                                    <p><span class="gia">540.000</span><sup>₫</sup></p>
+                                    <div class="icons">
+                                        <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                                        <a href="chan_vay_3.html" class="cart-btn">Chi tiết</a>
+                                        <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            </div><!--end-box-->
+        </div>
+                
+
+    </section>
+
+    <section id="new_products" style="padding:60px" class="sanpham">
+
+        <div class="new-p-heading" id="product_autumn">
+            <!--heading-->
+            <h3>BST Mùa Thu</h3>
+            <!--filter-->
+        </div>
+
+        <!--**container******************-->
+        <div class="new-product-container">
+
+            <!--**box**-->
+            <div class="new-product-box-wrapper skin" data-category="chan_vay">
+            <div class="new-product-box">
+                <!--img-->
+                <a href="./chan_vay_4.html" class="new-product-img hinh">
+                    <span>50%</span>
+                    <img src="./image 1/chan_vay_4_1.webp" />
+                </a>
+                <!--text-->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title ten">Chân Váy Mini Nữ Phối Bèo Form Fitted</a>
+                    <p><span class="gia">413.000</span><sup>₫</sup></p>
+                    <div class="icons">
+                        <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                        <a href="chan_vay_4.html" class="cart-btn">Chi tiết</a>
+                        <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+            </div><!--end-box-->
+
+            <!--**box**-->
+            <div class="new-product-box-wrapper skin" data-category="chan_vay">
+            <div class="new-product-box">
+                <!--img-->
+                <a href="./chan_vay_5.html" class="new-product-img hinh">
+                    <img src="./image 1/chan_vay_5_2.webp" />
+                    <span>10%</span>
+                </a>
+                <!--text-->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title ten">Chân Váy Nữ Dài 100% Cotton Kẻ Sọc Form Loose</a>
+                    <p><span class="gia">413.000</span><sup>₫</sup></p>
+                    <div class="icons">
+                        <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                        <a href="chan_vay_5.html" class="cart-btn">Chi tiết</a>
+                        <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+            </div><!--end-box-->
+
+            <!--**box**-->
+            <div class="new-product-box-wrapper skin" data-category="chan_vay">
+            <div class="new-product-box">
+                <!--img-->
+                <a href="./chan_vay_2.html" class="new-product-img hinh">
+                    <span>10%</span>
+                    <img src="./image 1/chan_vay_2_2.webp" />
+                </a>
+                <!--text-->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title ten">Chân Váy Jean Nữ Túi Đắp Trơn Form Chữ A</a>
+                    <p><span class="gia">412.000</span><sup>₫</sup></p>
+                    <div class="icons">
+                        <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                        <a href="chan_vay_2.html" class="cart-btn">Chi tiết</a>
+                        <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+            </div><!--end-box-->
+
+            <div class="new-product-box-wrapper skin" data-category="chan_vay">
+                <div class="new-product-box">
+                    <!--img-->
+                    <a href="./chan_vay_1.html" class="new-product-img hinh">
+                        <span>10%</span>
+                        <img src="./image 1/chan_vay_1_3.webp" />
+                    </a>
+                    <!--text-->
+                    <div class="new-product-text">
+                        <a href="#" class="new-product-title ten">Chân Váy Chữ A Jean Nữ Họa Tiết In Laser Form A Line</a>
+                        <p><span class="gia">540.000</span><sup>₫</sup></p>
+                        <div class="icons">
+                            <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                            <a href="chan_vay_1.html" class="cart-btn">Chi tiết</a>
+                            <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                </div><!--end-box-->
+                <div class="new-product-box-wrapper skin" data-category="chan_vay">
+                    <div class="new-product-box">
+                        <!--img-->
+                        <a href="./chan_vay_3.html" class="new-product-img hinh">
+                            <span>20%</span>
+                            <img src="./image 1/chan_vay_3_2.webp" />
+                        </a>
+                        <!--text-->
+                        <div class="new-product-text">
+                            <a href="#" class="new-product-title ten">Chân Váy Chữ A Nữ Kẻ Sọc Caro Xếp Ly Nhỏ Form A Line</a>
+                            <p><span class="gia">687.000</span><sup>₫</sup></p>
+                            <div class="icons">
+                                <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                                <a href="./chan_vay_3.html" class="cart-btn">Chi tiết</a>
+                                <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    </div><!--end-box-->
+        </div>
+        </div>
+    </section>
+    
+        <section class="product-grid-half_1"style="padding:60px">
+
+            <!--**box*************-->
+            <div class="product-grid-box_1 product-grid-box2"style="padding:50px">
+                
+            </div>
+            <div class="product-grid-box_1 product-grid-box3"></div>
+        
+        </section>
+        <!--filter-->
+    
+    <section id="new_products" style="padding:50px" class="sanpham">
+        <div class="new-p-heading" id="product_winter">
+            <!--heading-->
+            <h3>BST Mùa Đông</h3>
+        </div>
+
+        <!--**container******************-->
+        <div class="new-product-container">
+
+            <!--**box**-->
+            <div class="new-product-box-wrapper skin" data-category="dam">
+            <div class="new-product-box">
+                <!--img-->
+                <a href="./dam_1.html" class="new-product-img hinh">
+                    <span>10%</span>
+                    <img src="./image 1/chan_vay_5_1.webp" />
+                </a>
+                <!--text-->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title ten">Đầm Dài Sơ Mi Nữ Tay Ngắn Kẻ Sọc Polyester Form Loose </a>
+                    <p><span class="gia">638.000</span><sup>₫</sup></p>
+                    <div class="icons">
+                        <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                        <a href="./dam_1.html" class="cart-btn">Chi tiết</a>
+                        <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+            </div><!--end-box-->
+
+            <!--**box**-->
+            <div class="new-product-box-wrapper skin" data-category="dam">
+            <div class="new-product-box">
+                <!--img-->
+                <a href="./dam_2.html" class="new-product-img hinh">
+                    <img src="./image 1/dam_2_2.webp" />
+                    <span>10%</span>
+                </a>
+                <!--text-->
+                <div class="new-product-text ">
+                    <a href="#" class="new-product-title ten">Đầm Nữ Tay Ngắn Cotton Cổ Tròn Trơn Form Regular</a>
+                    <p><span class="gia">490.000</span><sup>₫</sup></p>
+                    <div class="icons">
+                        <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                        <a href="./dam_2.html" class="cart-btn">Chi tiết</a>
+                        <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+            </div><!--end-box-->
+
+            <!--**box**-->
+            <div class="new-product-box-wrapper skin" data-category="dam">
+            <div class="new-product-box">
+                <!--img-->
+                <a href="./dam_3.html" class="new-product-img hinh">
+                    <span>5%</span>
+                    <img src="./image 1/dam_3_2.webp" />
+                </a>
+                <!--text-->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title ten">Đầm Nữ Tay Dài Rộng Cutting Limited Edition Form Loose</a>
+                    <p><span class="gia">2.160.000</span><sup>₫</sup></p>
+                    <div class="icons">
+                        <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                        <a href="./dam_3.html" class="cart-btn">Chi tiết</a>
+                        <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+            </div><!--end-box-->
+
+            <div class="new-product-box-wrapper skin" data-category="dam">
+                <div class="new-product-box">
+                    <!--img-->
+                    <a href="./dam_4.html" class="new-product-img hinh">
+                        <span>5%</span>
+                        <img src="./image 1/dam_4_2.webp" />
+                    </a>
+                    <!--text-->
+                    <div class="new-product-text">
+                        <a href="#" class="new-product-title class">Đầm Nữ Chữ A Sát Nách Kẻ Sọc Caro Cổ V Form A Line</a>
+                        <p><span class="gia">785.000</span><sup>₫</sup></p>
+                        <div class="icons">
+                            <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                            <a href="./dam_4.html" class="cart-btn">Chi tiết</a>
+                            <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                </div><!--end-box-->
+                <div class="new-product-box-wrapper skin" data-category="dam">
+                    <div class="new-product-box">
+                        <!--img-->
+                        <a href="./dam_5.html" class="new-product-img hinh">
+                            <span>Skin</span>
+                            <img src="./image 1/dam_5_2.webp" />
+                        </a>
+                        <!--text-->
+                        <div class="new-product-text">
+                            <a href="#" class="new-product-title ten">Đầm Maxi Nữ 2 Dây Trơn Viscose Lai Tưa Form Aline </a>
+                            <p><span class="gia">785.000</span><sup>₫</sup></p>
+                            <div class="icons">
+                                <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                                <a href="./dam_5.html" class="cart-btn">Chi tiết</a>
+                                <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    </div><!--end-box-->
+
+                    <div class="new-product-box-wrapper skin" data-category="quan">
+                        <div class="new-product-box">
+                            <!--img-->
+                            <a href="./quan_10.html" class="new-product-img hinh">
+                                <span>Mall</span>
+                                <img src="./image 1/quan_10_2.webp" />
+                            </a>
+                            <!--text-->
+                            <div class="new-product-text">
+                                <a href="#" class="new-product-title ten">Quần Legging Nữ Thể Thao Lửng Co Giãn Form Slim Cropped</a>
+                                <p><span class="gia">294.000</span><sup>₫</sup></p>
+                                <div class="icons">
+                                    <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                                    <a href="./quan_10.html" class="cart-btn">Chi tiết</a>
+                                    <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        </div><!--end-box-->
+                        <div class="new-product-box-wrapper skin" data-category="quan">
+                            <div class="new-product-box">
+                                <!--img-->
+                                <a href="./quan_15.html" class="new-product-img hinh">
+                                    <span>25%</span>
+                                    <img src="./image 1/quan_15_2.webp" />
+                                </a>
+                                <!--text-->
+                                <div class="new-product-text">
+                                    <a href="#" class="new-product-title ten">Quần Dài Nữ Túi Mổ Xếp Ly Form Carrot </a>
+                                    <p><span class="gia">481.000</span><sup>₫</sup></p>
+                                    <div class="icons">
+                                        <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                                        <a href="./quan_15.html" class="cart-btn">Chi tiết</a>
+                                        <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            </div><!--end-box-->
+                            <div class="new-product-box-wrapper skin" data-category="quan">
+                                <div class="new-product-box">
+                                    <!--img-->
+                                    <a href="./quan_12.html" class="new-product-img hinh">
+                                        <span>10%</span>
+                                        <img src="./image 1/quan_12_2.webp" />
+                                    </a>
+                                    <!--text-->
+                                    <div class="new-product-text">
+                                        <a href="#" class="new-product-title ten">Quần Jean Nữ Ống Rộng Trơn Form Loose</a>
+                                        <p><span class="gia">392.000</span><sup>₫</sup></p>
+                                        <div class="icons">
+                                            <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                                            <a href="./quan_12.html" class="cart-btn">Chi tiết</a>
+                                            <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div><!--end-box-->
+                                <div class="new-product-box-wrapper skin" data-category="quan">
+                                    <div class="new-product-box">
+                                        <!--img-->
+                                        <a href="./quan_13.html" class="new-product-img hinh">
+                                            <span>20%</span>
+                                            <img src="./image 1/quan_13_2.webp" />
+                                        </a>
+                                        <!--text-->
+                                        <div class="new-product-text">
+                                            <a href="#" class="new-product-title ten">Quần Tây Nữ Ống Suông Premium Limited Form Regular</a>
+                                            <p><span class="gia">1.276.000</span><sup>₫</sup></p>
+                                            <div class="icons">
+                                                <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                                                <a href="./quan_13.html" class="cart-btn">Chi tiết</a>
+                                                <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div><!--end-box-->
+                    <div class="new-product-box-wrapper skin" data-category="quan">
+                    <div class="new-product-box">
+                        <!--img-->
+                        <a href="./quan_14.html" class="new-product-img hinh">
+                            <span>10%</span>
+                            <img src="./image 1/quan_14_3.webp" />
+                        </a>
+                        <!--text-->
+                        <div class="new-product-text">
+                            <a href="#" class="new-product-title ten">Quần Dài Nữ Ống Rộng Xếp Ly Phối Lưng Thun Form Relax</a>
+                            <p><span class="gia">638.000</span><sup>₫</sup></p>
+                            <div class="icons">
+                                <input style="width: 30px; outline: none;" type="number" value="1" min="1">
+                                <a href="./quan_14.html" class="cart-btn">Chi tiết</a>
+                                <button name="addToCart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    </div><!--end-box-->
+        </div>
+        </div>
+    </section>
+<!--------------Cart------------>
+
+<section class="cart">
+    <i class="fas fa-times"></i>
+    <h2>Giỏ hàng</h2>
+    <from action="">
+        <table >
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Chọn</th>
+                </tr>
+            </thead>
+             <tbody>
+               
+            </tbody>
+            
+        </table>
+        <div style="text-align: right;" class="price-total">
+            <p style="font-weight: bold;">Tổng tiền:<span>0</span><sup>đ</sup></p>
+        </div>
+        <button name="placeOrder">Đặt hàng</button>
+    </from>
+</section>
+   
+    <!------------------->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__1">
+                <a href="index.html" class="footer_logo"><h4>Haluyna</h4></a>
+                <p>
+                    Chúng tôi luôn mang đến cho các bạn những trãi nghiệm tốt nhất
+                </p>
+            </div>
+    
+            <div class="footer__2">
+                <h4>Permalinks</h4>
+                <ul class="permalinks">
+                   <li><a href="./TrangChu.html">Trang chủ</a></li> 
+                   <li><a href="./GioiThieu.html">Giới thiệu</a></li>
+                    <li><a href="./SanPham.html">Sản phẩm</a></li>
+                   <li><a href="./DanhGia.html">Đánh giá</a></li> 
+                    <li><a href="./LienHe.html">Liên hệ</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer__3">
+                <h4>Primacy</h4>
+                <ul class="privacy">
+                    <li><a href="#">An toàn</a></li>
+                    <li><a href="#">Tôn trọng</a></li>
+                    <li><a href="#">Đáng tin cậy</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer__4">
+                <h4>Liên hệ vói Chúng tôi</h4>
+                <div>
+                    <p>+09 999 999 9999</p>
+                    <p>testweb@gmail.com</p>
+                </div>
+    
+                <ul class="footer__socials">
+                    <li>
+                        <a href="#"><i class="uil uil-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-instagram-alt"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-linkedin-alt"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <small>&copy;Haluyna</small>
+        </div>
+    </footer>
+
+<script type="text/javascript" src="frontend/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js" integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+    $('.single-item').slick(
+    );
+$('.autoplay').slick({
+    slidesToShow: 3,
+    slidesToScroll:1,
+    autoplay: true,
+    autoplaySpeed: 500,
+  });
+
+</script>
+<script src="./shopping_cart.js"></script>
+<script src="./SanPham.js"></script>
+    </body>
+    </html>
+    
+
+    
+    

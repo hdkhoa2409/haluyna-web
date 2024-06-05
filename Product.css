@@ -1,0 +1,667 @@
+:root
+{
+    --pink:rgb(246, 0, 0);
+}
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border:none;
+    text-decoration: none;
+    text-transform:capitalize;
+    transition: .2s linear;
+    color:#070707;
+    --transition: all 400ms ease;
+    --color-primary: #6c63ff;
+    --color-success: #00bf8e;
+    --color-warning: #f7c94b;
+    --color-danger: #f75842;
+    --color-danger-variant: rgba(247, 88, 66, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.7);
+    --color-black: #000;
+   
+
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+
+    --transition: all 400ms ease;
+
+}
+html
+{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+
+}
+header
+{
+  width:100%;
+  display:flex;
+  padding:20px;
+  align-items: center;
+  z-index: 1000;
+  position:fixed;
+  justify-content: space-between;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  background-color: rgb(214, 196, 145);
+}
+header ul
+{
+   
+    display:flex;
+    
+}
+header ul li
+{
+    list-style-type: none;
+}
+header ul li a:hover
+{
+    color:var(--pink);
+    text-decoration:underline;
+}
+header .logo
+{
+    font-size: 3rem;
+    color:#101314;
+    font-weight:bolder;
+}
+/*kích thước đường logo/màu/độ đạm nhạt logo*/
+header .logo span
+{
+    color:var(--pink);
+}
+header .navbar a
+{
+    font-size: 2rem;
+    padding:0 1.5rem;
+    color:var#eae4e4;
+
+}
+header .navbar a:hover
+{
+    color:red;
+   
+}
+
+header .icons a
+{
+    font-size: 2.5rem;
+    color:#141212;
+    margin-left: 1.5rem;
+}/* kich thuoc icon ben trai*/
+header .icons a:hover{
+    color:var(--pink);
+}
+
+header #toggler
+{
+    display:none;
+}
+header .fa-bars
+{
+    font-size: 3rem;
+    color:#000000;
+    border-radius: .5rem;
+    padding:.5rem 1.5rem;
+    cursor:pointer ;
+    border:.1rem solid rgba(0,0,0,.3);
+    display:none;
+}
+.home
+{
+    display:flex;
+    align-items: center;
+    min-height: 120vh;
+    background-color: #fdfcfa;
+    background-size: cover;
+    background-position:center ;
+
+}
+header .icons a:hover{
+    color:var(--pink);
+}
+
+header #toggler
+{
+    display:none;
+}
+header .fa-bars
+{
+    font-size: 3rem;
+    color:#000000;
+    border-radius: .5rem;
+    padding:.5rem 1.5rem;
+    cursor:pointer ;
+    border:.1rem solid rgba(0,0,0,.3);
+    display:none;
+}
+.home
+{
+    display:flex;
+    align-items: center;
+    min-height: 120vh;
+    background-color: #fdfcfa;
+    background-size: cover;
+    background-position:center ;
+
+}
+
+
+/*sourse product*/
+.courses {
+    margin-top: 10rem;
+}
+
+.courses__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.course {
+    background: var(--color-bg1);
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.course:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.course__info {
+    padding: 2rem;
+}
+
+.course__info p {
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+}
+
+
+
+@media (max-width:991px)
+{
+    html
+{
+    font-size: 55%;
+    
+}
+header
+{
+    padding:2rem;
+}
+
+/*điều chỉnh kich thước trang khi trên các dao diện khác*/
+section
+{
+    padding:2rem;
+}
+.home
+{
+    background-position:left ;
+}
+}
+
+@media (max-width:768px)
+{
+    header .fa-bars
+    {
+        display:block;
+    }
+    header .navbar
+    {
+        position: absolute;
+        top:100%;left:0;right:0;
+        background:#eee;
+        border-top:.1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0,100% 0,100% 0, 0 0);
+    }
+    header #toggler:checked ~ .navbar
+    {
+        clip-path:polygon(0 0,100% 0,100% 100%, 0% 100%);
+    }/*tao list menu*/
+    header .navbar a
+    {
+        margin:1.5rem;
+        padding:1.5rem;
+        background:#fff;
+        border:.1rem solid rgba(0,0,0,.1);
+        display:block;
+    }
+    
+    .home .content span
+    {
+        font-size: 2.5rem;
+    }
+   
+    .icons-container .icons span
+    {
+        font-size: 1.7rem;
+    }
+.icons-container .icons span
+{
+    
+    
+    font-size: 1.7rem;
+}
+
+}
+
+
+@media (max-width:450px)
+{
+    html
+{
+    font-size: 50%;
+    
+}
+
+header
+{
+    padding:2rem;
+}
+/*điều chỉnh kích thước trang khi trên các dao diện khác*/
+}
+
+
+/*==footer================================*/
+footer {
+    background-color: rgb(214, 196, 145);
+    padding-top: 5rem;
+    font-size: 1rem;
+}
+
+.footer__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+}
+
+.footer__container > div h4 {
+    margin-bottom: 1.2rem;
+}
+
+.footer__1 p {
+    margin: 0 0 2rem;
+}
+
+footer ul ui {
+    margin-bottom: 0.7rem;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.footer__copyright {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--color-bg2);
+}
+
+
+
+/*sourse product*/
+.courses {
+    margin-top: 10rem;
+}
+
+.courses__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.course {
+    background: var(--color-bg1);
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.course:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.course__info {
+    padding: 2rem;
+}
+
+.course__info p {
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+}
+
+
+
+/*MEDIA QUERIES*/
+@media (max-width:991px)
+{
+    html
+{
+    font-size: 55%;
+    
+}
+header
+{
+    padding:2rem;
+}
+
+/*điều chỉnh kich thước trang khi trên các dao diện khác*/
+section
+{
+    padding:2rem;
+}
+.home
+{
+    background-position:left ;
+}
+}
+
+@media (max-width:768px)
+{
+    header .fa-bars
+    {
+        display:block;
+    }
+    header .navbar
+    {
+        position: absolute;
+        top:100%;left:0;right:0;
+        background:#eee;
+        border-top:.1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0,100% 0,100% 0, 0 0);
+       
+    }
+    header #toggler:checked ~ .navbar
+    {
+        clip-path:polygon(0 0,100% 0,100% 100%, 0% 100%);
+    }/*tao list menu*/
+    header .navbar a
+    {
+        margin:1.5rem;
+        padding:1.5rem;
+        background:#fff;
+        border:.1rem solid rgba(0,0,0,.1);
+        display:block;
+    }
+    .home .content h3
+    {
+        font-size: 5rem;
+    }
+    .home .content span
+    {
+        font-size: 2.5rem;
+    }
+    .icons-container .icons h3
+    {
+   
+    font-size: 2rem;
+    }
+    .icons-container .icons span
+    {
+        font-size: 1.7rem;
+    }
+    header form
+    {
+       width:40%;
+       height:30%;
+    }
+   
+    header li h2
+    {
+        font-size:.6rem;
+        display:grid;
+    }
+.icons-container .icons span
+{
+    
+    
+    font-size: 1.7rem;
+}
+.information-product-content .information-product-content-mota p
+{
+    font-size:1.3rem;
+    text-align: justify;
+}
+section .product-content 
+{
+    display:grid;
+    float:left;
+
+}
+.information-product-content .price-product.gia
+{
+    font-size: 1rem;;
+}
+.product-content-right .name-product h1
+{
+    font-size:2rem;
+}
+.product-content
+{
+    width:100%;
+    height:100%;
+}
+footer
+{
+    float:left;
+}
+}
+
+
+@media (max-width:450px)
+{
+    html
+{
+    font-size: 50%;
+    
+}
+.heading
+{
+    font-size:3rem ;
+}
+header
+{
+    padding:2rem;
+}
+/*điều chỉnh kích thước trang khi trên các dao diện khác*/
+}
+
+.courses 
+{
+    margin-top: 10rem;
+}
+
+.courses__container 
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.course {
+    background: var(--color-bg1);
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.course:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.course__info {
+    padding: 2rem;
+}
+
+.course__info p {
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+}
+
+
+
+
+.product{
+    padding: 30px 0;
+}
+.container{
+    max-width: 1400px;
+    margin: 25px 30px 30px 30px;
+}
+.product-content-left{
+    width: 40%;
+    margin-top: 50px;
+}
+.product-content-big{
+    width: 80%;
+    padding-right: 5px;
+}
+.product-content-big img{
+    width: 100%;
+    
+}
+.product-content-small{
+    width: 20%;
+   
+}
+.product-content-small img{
+    width: 100%;
+    cursor: pointer;
+    padding: 5px;
+}
+.row{
+    display: flex;
+    flex-wrap:nowrap;
+}
+.product-content-right{
+    width: 60%;
+    padding-left: 20px;
+    margin-top: 50px;
+}
+.li{
+    list-style: none;
+}
+.a{
+    text-decoration: none;
+}
+.product-content-right{
+    width: 50%;
+    padding-left: 20px;
+}
+.name-product h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.price-product {
+    font-size: 50px;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+.quantity{
+    display: flex;
+    margin-bottom: 20px;
+}
+.quantity p{
+    height: 30px;
+    padding-right: 6px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+.quantity input{
+    height: 25px;
+    width: 45px;
+    padding-left: 6px ;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 2px solid black;
+}
+
+.button-product button{
+    width: 300px;
+    height: 50px;
+    display: block;
+    margin: 20px 10px 12px;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+.button-product button p{
+    width: 300px;
+    height: 50px;
+    margin: 40px 10px 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    border-radius: 300px;
+}
+.button-product button:first-child{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.button-product button:first-child:hover{
+    background-color:  rgb(214, 196, 145);
+    color: white;
+    border: 2px solid white;
+}
+.information-product-title-big{
+    max-width: 750px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    border-bottom: 2px solid grey;
+}
+.information-product-title{
+    cursor: pointer;
+    padding: 5px 15px 5px 0px;
+    
+}
+.information-product-title p:hover{
+    background-color: rgb(214, 196, 145);
+    color: white;
+}
+.information-product-content{
+    padding-top: 20px;
+    align-items: center;
+}
+
+.information-product-content p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    width: 700px;
+}
+.information-product-content img{
+    width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+}
+.information-product-content-dacdiem{
+    display: none;
+}
+.information-product-content-size{
+    display: none;
+}

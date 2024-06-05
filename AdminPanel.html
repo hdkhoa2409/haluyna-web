@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haluyna - Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="AdminPanel.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/679/679847.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Haluyna - Admin Panel</h1>
+        <button id="logoutButton">Đăng xuất</button>
+        <form id="itemForm">
+            <input type="hidden" id="itemId">
+            <input type="text" id="itemName" placeholder="Tên sản phẩm" required>
+            <input type="number" id="itemPrice" placeholder="Giá tiền" required>
+            <textarea id="itemDetails" placeholder="Thông tin sản phẩm" required></textarea>
+            <input type="file" id="itemImage" accept="image/*" required>
+            <button type="submit">Lưu</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Hình ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá tiền</th>
+                    <th>Thông tin sản phẩm</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="itemTableBody">
+                <!-- Item rows will be appended here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="AdminPanel.js"></script>
+</body>
+</html>

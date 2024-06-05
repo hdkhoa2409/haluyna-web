@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác Nhận Đặt Hàng - Haluyna</title>
+    <link rel="stylesheet" href="./XacNhanDatHang.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/679/679847.png">
+</head>
+<body>
+    <section class="confirmation">
+        <h2>Xác Nhận Đặt Hàng - Haluyna</h2>
+        <div class="order-summary">
+            <h3>Thông Tin Đơn Hàng</h3>
+            <div id="order-items">
+                <!-- Giỏ hàng sẽ được hiển thị ở đây -->
+            </div>
+            <p class="total-amount" id="total-amount"><strong>Tổng tiền: </strong><span>0</span><span>đ</span></p>
+            <p class="total-quanity" id="total-quanity"><strong>Tổng số lượng: </strong><span>0</span></p>
+        </div>
+        <form class="customer-info" action="place-order.html" method="post">
+            <h3>Thông Tin Khách Hàng</h3>
+            <label for="name">Tên:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="address">Địa chỉ:</label>
+            <input type="text" id="address" name="address" required>
+            <label for="phone">Số điện thoại:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <div class="payment-method">
+                <label class="custom-radio">Thanh toán bằng tiền mặt
+                    <input type="radio" name="payment-method" value="cash" required>
+                    <span></span>
+                </label>
+                <label class="custom-radio">Thanh toán bằng thẻ ngân hàng
+                    <input type="radio" name="payment-method" value="card" required>
+                    <span></span>
+                </label>
+            </div>
+    
+            <div id="card-info" style="display: none;">
+                <label for="card-number">Số thẻ:</label>
+                <input type="text" id="card-number" name="card-number">
+                <label for="card-expiry">Ngày hết hạn:</label>
+                <input type="text" id="card-expiry" name="card-expiry">
+                <label for="card-cvc">CVC:</label>
+                <input type="text" id="card-cvc" name="card-cvc">
+            </div>
+    
+            <button type="submit" id="confirm-order-btn" disabled>Xác Nhận Đặt Hàng</button>
+        </form>
+    </section>
+    
+    <div id="success-message" class="success-message">
+        Đã đặt hàng thành công
+    </div>
+    <script src="./shopping_cart.js"></script>
+    <script src="./XacNhanDatHang.js"></script>
+</body>
+</html>
